@@ -1,2 +1,3 @@
 <?php
-Car::delete($dbc, $_POST['serialNumber']);
+
+Car::delete($dbc, $_POST['id_car']);

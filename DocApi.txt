@@ -1,5 +1,7 @@
 Api Rentacar:
 
+Le nom de mon virtualhost était phpapibv et non pas le nom du dossier dans lequel je l'envoie.
+
 Afficher la liste des véhicules par numéro de série et nombre de place:
 GET: http://phpapibv/index.php?action=list
 
@@ -8,11 +10,12 @@ choisir le numero de série dans GET serialNumber (exemple: http://phpapibv/inde
 http://phpapibv/index.php?action=car
 
 Ajouter un nouveau véhicule:
-Remplir les champs seats, licensePlate, serialNumber, color, brand_id_brand, model_id_model
-POST: http://apimail/index.php?action=caradd
+Remplir les champs seats, licencePlate, serialNumber, color, brand_id_brand, model_id_model
+POST: http://phpapibv/index.php?action=caradd
 
 Modifier un véhicule:
-POST: http://apimail/index.php?action=caredit
+via son id_car dans GET et les informations a modifier en POST
+POST: http://phpapibv/index.php?action=caredit&id_car=
 
-Supprimer un véhicule:
-POST: http://apimail/index.php?action=cardelete
+Supprimer un véhicule via son id_car
+POST: http://phpapibv/index.php?action=cardelete

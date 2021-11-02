@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2007f7-9f61-490c-ac2b-d8f068503a4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DocApi.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/carAddController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/carDeleteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/carEditController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/carIdController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/carListController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/deleteCarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/vehiculesApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Car.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/catList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Brand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/catListView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocApi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocApi.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/carAddController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/carAddController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/carEditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/carEditController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/deleteCarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/deleteCarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/vehiculesApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/vehiculesApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

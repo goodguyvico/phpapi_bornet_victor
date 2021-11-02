@@ -2,7 +2,7 @@
 class Car {
     private $id_car;
     private $seats;
-    private $licensePlate;
+    private $licencePlate;
     private $serialNumber;
     private $color;
     private $brand_id_brand;
@@ -80,17 +80,17 @@ class Car {
     /**
      * @return mixed
      */
-    public function getLicensePlate()
+    public function getLicencePlate()
     {
-        return $this->licensePlate;
+        return $this->licencePlate;
     }
 
     /**
-     * @param mixed $licensePlate
+     * @param mixed $licencePlate
      */
-    public function setLicensePlate($licensePlate)
+    public function setLicencePlate($licencePlate)
     {
-        $this->licensePlate = $licensePlate;
+        $this->licencePlate = $licencePlate;
     }
 
     /**
@@ -166,10 +166,10 @@ INNER JOIN brand ON brand_id_brand = id_brand WHERE serialNumber = :serialNumber
      * @param $model_id_model
      * @return mixed
      */
-    public static function addCar($dbc, $seats, $licensePlate, $serialNumber, $color, $brand_id_brand, $model_id_model){
-        $query = 'INSERT INTO car (id_car, seats, licensePlate, serialNumber, color, brand_id_brand, model_id_model)
-    VALUES (NULL, :seats, :licensePlate, :serialNumber, :color, :brand_id_brand, :model_id_model)';
-        $aBindParam = array(':seats'=>$seats,':licensePlate'=>$licensePlate,':serialNumber'=>$serialNumber, ':color'=>$color, ':brand_id_brand'=>$brand_id_brand, ':model_id_model'=>$model_id_model);
+    public static function addCar($dbc, $seats, $licencePlate, $serialNumber, $color, $brand_id_brand, $model_id_model){
+        $query = 'INSERT INTO car (id_car, seats, licencePlate, serialNumber, color, brand_id_brand, model_id_model)
+    VALUES (NULL, :seats, :licencePlate, :serialNumber, :color, :brand_id_brand, :model_id_model)';
+        $aBindParam = array(':seats'=>$seats,':licencePlate'=>$licencePlate,':serialNumber'=>$serialNumber, ':color'=>$color, ':brand_id_brand'=>$brand_id_brand, ':model_id_model'=>$model_id_model);
         $add = $dbc->update($query, $aBindParam, __CLASS__);
         return $add;
     }
@@ -180,37 +180,37 @@ INNER JOIN brand ON brand_id_brand = id_brand WHERE serialNumber = :serialNumber
      * @param $dbc
      * @param $id_car
      * @param $seats
-     * @param $licensePlate
+     * @param $licencePlate
      * @param $serialNumber
      * @param $color
      * @param $brand_id_brand
      * @param $model_id_model
      * @return mixed
      */
-    public static function updateCar($dbc, $id_car, $seats, $licensePlate, $serialNumber, $color, $brand_id_brand, $model_id_model) {
+    public static function updateCar($dbc, $id_car, $seats, $licencePlate, $serialNumber, $color, $brand_id_brand, $model_id_model) {
 
         $query = 'UPDATE car
     SET seats = :seats,
-        licensePlate = :licensePlate,
+        licencePlate = :licencePlate,
         serialNumber = :serialNumber,
         color = :color,
         brand_id_brand = :brand_id_brand,
         model_id_model = :model_id_model
     WHERE id_car = :id_car';
-        $aBindParam = array(':id_car'=>$id_car,':seats'=>$seats,':licensePlate'=>$licensePlate,':serialNumber'=>$serialNumber, ':color'=>$color, ':brand_id_brand'=>$brand_id_brand, ':model_id_model'=>$model_id_model);
+        $aBindParam = array(':id_car'=>$id_car,':seats'=>$seats,':licencePlate'=>$licencePlate,':serialNumber'=>$serialNumber, ':color'=>$color, ':brand_id_brand'=>$brand_id_brand, ':model_id_model'=>$model_id_model);
         $update = $dbc->update($query, $aBindParam, __CLASS__);
         return $update;
     }
 
     /**
-     * Permet de supprimé un véhicule dans l'api
+     * Permet de supprimer un véhicule
      *
      * @param $dbc
-     * @param $serialNumber
+     * @param $id_car
      */
-    public static function delete($dbc, $serialNumber) {
-        $query = 'DELETE FROM car WHERE serialNumber = :serialNumber';
-        $aBindParam = array('serialNumber'=>$serialNumber);
+    public static function delete($dbc, $id_car) {
+        $query = 'DELETE FROM car WHERE id_car = :id_car';
+        $aBindParam = array('id_car'=>$id_car);
         $dbc->update($query, $aBindParam, __CLASS__);
     }
 

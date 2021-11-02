@@ -26,27 +26,6 @@ class Database extends PDO
 
     }
 
-    public function classlist($sql, $fetchmode, $classname =''){
-
-        $sth = $this->prepare($sql);
-        $sth->execute();
-
-        return $sth->fetchAll($fetchmode, $classname);
-
-    }
-
-    public function select($sql, $array = array(), $fetchmode = PDO::FETCH_CLASS, $classname = '')
-    {
-        $sth = $this->prepare($sql);
-
-        foreach ($array as $key => $value):
-            $sth->bindValue("$key", $value);
-        endforeach;
-        $sth->execute();
-        $sth->setFetchMode(PDO::FETCH_CLASS, $fetchmode);
-
-        return $sth->fetch();
-    }
 
     public function update($sql, $array = array())
     {
@@ -56,10 +35,6 @@ class Database extends PDO
         endforeach;
         $sth->execute();
     }
-
-
-
-// Requette Json
 
     public function classlistJson($sql, $fetchmode){
 

@@ -25,5 +25,8 @@ if (!empty($_GET)):
         case 'vehiculesapi':
             include('controllers/vehiculesApiController.php');
             break;
+        case 'catList':
+            include('controllers/catList.php');
+            break;
     endswitch;
 endif;
