@@ -1,0 +1,18 @@
+Api Rentacar:
+
+Afficher la liste des véhicules par numéro de série et nombre de place:
+GET: http://phpapibv/index.php?action=list
+
+Afficher les information d'un véhicule par numéro de serie:
+choisir le numero de série dans GET serialNumber (exemple: http://phpapibv/index.php?action=car&serialNumber=123456781)
+http://phpapibv/index.php?action=car
+
+Ajouter un nouveau véhicule:
+Remplir les champs seats, licensePlate, serialNumber, color, brand_id_brand, model_id_model
+POST: http://apimail/index.php?action=caradd
+
+Modifier un véhicule:
+POST: http://apimail/index.php?action=caredit
+
+Supprimer un véhicule:
+POST: http://apimail/index.php?action=cardelete

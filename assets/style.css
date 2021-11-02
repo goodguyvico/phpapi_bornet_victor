@@ -1,0 +1,126 @@
+@charset "UTF-8";
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 1em 1em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+}
+
+main a {
+  color: #000000;
+  text-decoration: none;
+}
+
+main a::after {
+  content: '›';
+  padding-left: 0.2em;
+  margin-right: 0.5em;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+main a:hover {
+  border-bottom: 1px solid #000000;
+}
+
+main > a {
+  background-color: #000000;
+  border-radius: 1em;
+  color: #FFFFFF;
+  float: right;
+  padding: 0.5em 1em;
+}
+
+main > a::after {
+  content: none;
+}
+
+main table {
+  width: 100%;
+  margin: 2em 0;
+}
+
+main table tr {
+  height: 2em;
+}
+
+main table tr th {
+  border-bottom: 2px solid #000000;
+  text-align: left;
+}
+
+main table tr th:last-child {
+  text-align: right;
+}
+
+main table tr td {
+  border-bottom: 1px solid #000000;
+  text-align: left;
+}
+
+main table tr td:last-child {
+  text-align: right;
+}
+
+main form {
+  max-width: 600px;
+  width: 100%;
+}
+
+main form label {
+  display: none;
+}
+
+main form input, main form textarea {
+  border: none;
+  padding: 0.2em;
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+main form input[type=text], main form input[type=number] {
+  border-bottom: 2px solid #000000;
+  height: 2em;
+}
+
+main form textarea {
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
+  font-family: 'Lato', sans-serif;
+  height: 6em;
+}
+
+
+main form input[type=submit] {
+  background-color: #000000;
+  border-radius: 1em;
+  color: #FFFFFF;
+  display: block;
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  width: 30%;
+  max-width: 200px;
+  min-width: 50px;
+}
+/*# sourceMappingURL=style.css.map */
